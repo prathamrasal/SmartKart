@@ -1,0 +1,76 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "warrantyContractAddress",
+        "type": "address"
+      }
+    ],
+    "name": "SellerCreated",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "NFTName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "NFTSymbol",
+        "type": "string"
+      }
+    ],
+    "name": "createSeller",
+    "outputs": [
+      {
+        "internalType": "contract WarrantyNFT",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getWarrantyContract",
+    "outputs": [
+      {
+        "internalType": "contract WarrantyNFT",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "sellers",
+    "outputs": [
+      {
+        "internalType": "contract WarrantyNFT",
+        "name": "WarrantyContract",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "isValue",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
