@@ -1,0 +1,72 @@
+/****Authentication Routes:****/
+
+SignUp:(POST) 		
+https://flipkart-grid-4.herokuapp.com/api/auth/createUser 		
+KEYS--> {username, phone, email, password, role, businessName}
+
+Login:(POST) 		
+https://flipkart-grid-4.herokuapp.com/api/auth/login              
+KEYS--> {email, password}
+
+VerifyToken:(POST)
+https://flipkart-grid-4.herokuapp.com/api/auth/verifyToken   	
+KEYS--> {token}
+
+Get User:(GET) 		
+https://flipkart-grid-4.herokuapp.com/api/auth/getUser 
+
+Verify Seller (POST)
+https://flipkart-grid-4.herokuapp.com/api/auth/verifySeller
+KEYS-->{warrantyAddress}
+
+/****Product Routes****/
+
+Add Product(POST)		
+https://flipkart-grid-4.herokuapp.com/api/product/
+KEYS-->{name, type, cost, warranty, description,image}
+
+Get All Products(GET)   
+https://flipkart-grid-4.herokuapp.com/api/product/
+
+Get Seller's Product (GET)
+https://flipkart-grid-4.herokuapp.com/api/product/sellerProduct/:id
+Params-->{:id = Seller's Id}
+
+Update Product (PATCH)
+https://flipkart-grid-4.herokuapp.com/api/product/:id
+Params-->{:id = Seller's Id}
+KEYS -->{Full Object}
+
+/****Order Routes****/
+
+Place Order: (POST)
+https://flipkart-grid-4.herokuapp.com/api/order/	
+KEYS-->{ productId, customerName, customerAddress, customerContact, houseNumber, city, pincode, country }
+Note--> productId Should be array of product's Objectid 
+
+Get Order: (GET)
+https://flipkart-grid-4.herokuapp.com/api/order/
+
+Update Delivery Status(POST) 
+https://flipkart-grid-4.herokuapp.com/api/order/:id          	
+Params-->{:id = orderId}
+KEYS-->{status}
+
+Set NFT Uri (POST)
+https://flipkart-grid-4.herokuapp.com/api/order/nftUri/:id
+Params-->{:id = orderId}
+Keys-->{NftUri}
+
+/****Cart Routes****/
+
+Add Item to Cart (POST)
+https://flipkart-grid-4.herokuapp.com/api/cart/
+KEYS-->{productId}
+
+Get Cart Items (GET)
+https://flipkart-grid-4.herokuapp.com/api/cart/
+
+Remove Cart Items (DELETE)
+https://flipkart-grid-4.herokuapp.com/api/cart/:id
+Params-->{:id= productId}
+
